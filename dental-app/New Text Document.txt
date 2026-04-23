@@ -1,0 +1,17 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyDXtuwjjUbtIziFBZ10_CkMHosby4-TNz4",
+  authDomain: "dental-clinic-app-d78cf.firebaseapp.com",
+  projectId: "dental-clinic-app-d78cf",
+  storageBucket: "dental-clinic-app-d78cf.firebasestorage.app",
+  messagingSenderId: "859062108865",
+  appId: "1:859062108865:web:97072799b13e6a77c60a40"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+</head>
+<body>
+
+  <h2>Dashboard</h2>
+
+  <button onclick="goAdd()">Add Patient</button>
+
+  <h3>Patients List</h3>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Patient ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Phone</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Gender</th>
+        <th>Complaints</th>
+        <th>Diagnosis</th>
+        <th>OPD</th>
+        <th>Report</th>
+      </tr>
+    </thead>
+    <tbody id="patientTable"></tbody>
+  </table>
+
+  <script>
+    function goAdd() {
+      window.location.href = "add-patient.html";
+    }
+  </script>
+
+  <script type="module" src="firebase.js"></script>
+  <script type="module" src="dashboard.js"></script>
+
+</body>
+</html>
