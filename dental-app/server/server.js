@@ -5,10 +5,16 @@ import { v2 as cloudinary } from "cloudinary";
 const app = express();
 app.use(cors());
 
-cloudinary.config({
+/* cloudinary.config({
   cloud_name: "dgxfeqcp1",
   api_key: "625477488733784",
   api_secret: "TOWUG4ozVcyJ9Pvqrpn9QYa8-bU"
+}); */
+
+cloudinary.config({
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.API_KEY,
+  api_secret: process.env.API_SECRET
 });
 
 // 🔥 SECURE VIEW URL (IMPORTANT FIX)
@@ -77,8 +83,14 @@ app.get("/delete-image", async (req, res) => {
     }
   });
 
-app.listen(3000, () => {
+/* app.listen(3000, () => {
   console.log("✅ Server running http://localhost:3000");
+}); */
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log("Server running on port " + PORT);
 });
 
 
