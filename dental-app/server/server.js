@@ -3,7 +3,9 @@ import cors from "cors";
 import { v2 as cloudinary } from "cloudinary";
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "*"
+}));
 
 /* cloudinary.config({
   cloud_name: "dgxfeqcp1",
@@ -84,7 +86,7 @@ app.get("/delete-image", async (req, res) => {
   });
 
 /* app.listen(3000, () => {
-  console.log("✅ Server running http://localhost:3000");
+  console.log("✅ Server running https://dental-clinic-b8or.onrender.com/");
 }); */
 
 const PORT = process.env.PORT || 3000;

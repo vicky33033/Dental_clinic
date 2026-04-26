@@ -9,7 +9,7 @@ import {
 
 async function getSecureImage(publicId) {
   try {
-    const res = await fetch(`http://localhost:3000/get-image?id=${publicId}`);
+    const res = await fetch(`https://dental-clinic-b8or.onrender.com/get-image?id=${publicId}`);
 
     if (!res.ok) {
       throw new Error("Failed to fetch image URL");
@@ -29,7 +29,7 @@ window.deleteImage = async function (patientId, publicId) {
   if (!confirm("Delete this image?")) return;
 
   // 🔥 Step 1: delete from Cloudinary
-  await fetch(`http://localhost:3000/delete-image?id=${publicId}`);
+  await fetch(`https://dental-clinic-b8or.onrender.com/delete-image?id=${publicId}`);
 
   // 🔥 Step 2: get doc
   const docRef = doc(db, "patients", patientId);

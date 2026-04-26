@@ -27,7 +27,7 @@ window.addPatient = async function () {
     if (files.length > 0) {
 
       // 🔐 Get signature from backend
-      const sigRes = await fetch("http://localhost:3000/get-signature");
+      const sigRes = await fetch("https://dental-clinic-b8or.onrender.com/get-signature");
 
       if (!sigRes.ok) {
         throw new Error("Signature API failed");
